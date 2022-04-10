@@ -15,6 +15,9 @@ import java.util.function.Supplier;
 public enum DemoArmorMaterial implements ArmorMaterial {
     INDUSTRYWOOL("industrywool", 5, new int[]{1,3,2,1}, 15, SoundEvents.BLOCK_WOOL_PLACE, 0.0F, () -> {
         return Ingredient.ofItems(Items.WHITE_WOOL);
+    }),
+    IRONGOLDINGOT("irongold",10,new int[]{2,6,4,2},35,SoundEvents.BLOCK_NETHER_GOLD_ORE_PLACE,1.5F,() -> {
+        return Ingredient.ofItems(Items.IRON_INGOT);
     });
 
     private static final int[] BASE_DURABILITY = new int[]{6, 8, 8, 5};

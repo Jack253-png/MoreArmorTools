@@ -24,6 +24,10 @@ public class Group {
     public static final Item WoolChestplate = new WoolChestplate(DemoArmorMaterial.INDUSTRYWOOL, EquipmentSlot.CHEST, new Item.Settings().group(Armors));
     public static final Item WoolLeggings = new WoolLeggings(DemoArmorMaterial.INDUSTRYWOOL, EquipmentSlot.LEGS, new Item.Settings().group(Armors));
     public static final Item WoolBoots = new WoolBoots(DemoArmorMaterial.INDUSTRYWOOL, EquipmentSlot.FEET, new Item.Settings().group(Armors));
+    public static final Item IronGoldHemlet = new IronGoldHemlet(DemoArmorMaterial.IRONGOLDINGOT, EquipmentSlot.HEAD, new Item.Settings().group(Armors));
+    public static final Item IronGoldChestplate = new IronGoldChestPlate(DemoArmorMaterial.IRONGOLDINGOT, EquipmentSlot.CHEST, new Item.Settings().group(Armors));
+    public static final Item IronGoldLeggings = new IronGoldLeggings(DemoArmorMaterial.IRONGOLDINGOT, EquipmentSlot.LEGS, new Item.Settings().group(Armors));
+    public static final Item IronGoldBoots = new IronGoldBoots(DemoArmorMaterial.IRONGOLDINGOT, EquipmentSlot.FEET, new Item.Settings().group(Armors));
 
     public static final Item WoolAxe = new WoolAxe(new Item.Settings().group(Tools));
     public static final Item WoolSword = new WoolSword(new Item.Settings().group(Tools));

@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import java.lang.Thread;
 import java.util.Date;
-import java.util.stream.Collectors;
+import net.minecraft.item.Items;
 
 public class Client implements ModInitializer {
 	public static final Logger logger = LogManager.getLogger("More Armor Tools Logger");
@@ -63,6 +63,10 @@ public class Client implements ModInitializer {
 			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldsword"),Group.IronGoldSword);
 			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldshovel"),Group.IronGoldShovel);
 			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldhoe"),Group.IronGoldHoe);
+			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldhemlet"),Group.IronGoldHemlet);
+			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldchestplate"),Group.IronGoldChestplate);
+			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldleggings"),Group.IronGoldLeggings);
+			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldboots"),Group.IronGoldBoots);
 			logger.info("Items Registried");
 		}
 		catch (Exception e){
