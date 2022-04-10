@@ -27,6 +27,10 @@
   "item.morearmortools.irongoldpickaxe" : "琥珀金稿",
   "item.morearmortools.irongoldsword" : "琥珀金剑",
   "item.morearmortools.irongoldshovel" : "琥珀金锹",
-  "item.morearmortools.irongoldhoe" : "琥珀金锄"
+  "item.morearmortools.irongoldhoe" : "琥珀金锄",
+  "item.morearmortools.irongoldhemlet" : "琥珀金头盔",
+  "item.morearmortools.irongoldchestplate" : "琥珀金胸甲",
+  "item.morearmortools.irongoldleggings" : "琥珀金护腿",
+  "item.morearmortools.irongoldboots" : "琥珀金靴子"
 }
 
