@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " *",
+    " *",
+    " -"
+  ],
+  "key": {
+    "*": {
+      "item" : "morearmortools:irongoldingot"
+    },
+    "-": {
+      "item" : "minecraft:stick"
+    }
+
+  },
+  "result": {
+    "item": "morearmortools:irongoldsword"
+  }
+}

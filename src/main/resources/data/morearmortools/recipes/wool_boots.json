@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "* *",
+    "* *"
+  ],
+  "key": {
+    "*": {
+      "item": "morearmortools:industry_wool"
+    }
+  },
+  "result": {
+    "item": "morearmortools:wool_boots"
+  }
+}
