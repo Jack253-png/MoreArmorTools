@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "* *",
+    "***",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "morearmortools:irongoldingot"
+    }
+  },
+  "result": {
+    "item": "morearmortools:irongoldchestplate"
+  }
+}
