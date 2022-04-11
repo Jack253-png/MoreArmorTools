@@ -31,5 +31,6 @@
   "item.morearmortools.irongoldhemlet" : "Iron Gold Hemlet",
   "item.morearmortools.irongoldchestplate" : "Iron Gold ChestPlate",
   "item.morearmortools.irongoldleggings" : "Iron Gold Leggings",
-  "item.morearmortools.irongoldboots" : "Iron Gold Boots"
+  "item.morearmortools.irongoldboots" : "Iron Gold Boots",
+  "block.morearmortools.irongoldblock" : "Iron Gold Block"
 }
