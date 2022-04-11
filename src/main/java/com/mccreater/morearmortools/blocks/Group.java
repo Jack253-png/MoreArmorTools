@@ -42,6 +42,7 @@ public class Group {
     public static final Item IronGoldHoe = new IronGoldHoe(new Item.Settings().group(Tools));
 
     public static final Block IndustryWool = new IndustryWool(FabricBlockSettings.of(Material.WOOL).hardness(0.7f));
+    public static final Block IronGoldBlock = new IronGoldBlock(FabricBlockSettings.of(Material.METAL).hardness(2.0f));
 
     public static final Item CompressionStick1x = new CompressionStick1x(new Item.Settings().group(Materials));
     public static final Item CompressionStick2x = new CompressionStick2x(new Item.Settings().group(Materials));

@@ -11,6 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import java.lang.Thread;
 import java.util.Date;
 import net.minecraft.item.Items;
+import org.lwjgl.system.CallbackI;
 
 public class Client implements ModInitializer {
 	public static final Logger logger = LogManager.getLogger("More Armor Tools Logger");
@@ -48,6 +49,8 @@ public class Client implements ModInitializer {
 			Registry.register(Registry.ITEM, new Identifier(modid,"compressionwoodsword"),Group.CompressionWoodSword);
 			Registry.register(Registry.BLOCK,new Identifier(modid,"industry_wool"),Group.IndustryWool);
 			Registry.register(Registry.ITEM, new Identifier(modid,"industry_wool"),new BlockItem(Group.IndustryWool, new Item.Settings().group(Group.Materials)));
+			Registry.register(Registry.BLOCK,new Identifier(modid,"irongoldblock"),Group.IronGoldBlock);
+			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldblock"),new BlockItem(Group.IronGoldBlock, new Item.Settings().group(Group.Materials)));
 			Registry.register(Registry.ITEM, new Identifier(modid,"compressionstick1x"),Group.CompressionStick1x);
 			Registry.register(Registry.ITEM, new Identifier(modid,"compressionstick2x"),Group.CompressionStick2x);
 			Registry.register(Registry.ITEM, new Identifier(modid,"compressionstick3x"),Group.CompressionStick3x);
