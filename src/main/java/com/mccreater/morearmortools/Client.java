@@ -1,21 +1,22 @@
 package com.mccreater.morearmortools;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import com.mccreater.morearmortools.blocks.Group;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 import java.lang.Thread;
+import java.util.Collection;
 import java.util.Date;
-import net.minecraft.item.Items;
-import org.lwjgl.system.CallbackI;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import com.mccreater.morearmortools.utils.spiltString;
 
 public class Client implements ModInitializer {
-	public static final Logger logger = LogManager.getLogger("More Armor Tools Logger");
-
+	public static final Logger logger = LoggerFactory.getLogger("More Armor Tools Logger");
 	@Override
 	public void onInitialize(){
 		Thread initlaze = new Thread(this::initlaze);
@@ -29,7 +30,6 @@ public class Client implements ModInitializer {
 			logger.info("Now Time:"+new Date().toString());
 			logger.info("Max Memory:"+Runtime.getRuntime().maxMemory() / 1024 / 1024+"MB");
 			logger.info("Run on OS:"+ System.getProperty("os.name"));
-
 			ThreadGroup parentThread;
 			int totalThread = 0;
 			for (parentThread = Thread.currentThread().getThreadGroup(); parentThread
@@ -70,13 +70,39 @@ public class Client implements ModInitializer {
 			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldchestplate"),Group.IronGoldChestplate);
 			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldleggings"),Group.IronGoldLeggings);
 			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldboots"),Group.IronGoldBoots);
+			Registry.register(Registry.ITEM, new Identifier(modid,"irongoldingottoirongoldblock"),Group.IronGoldBlockToIronGoldIngot);
+			Registry.register(Registry.ITEM, new Identifier(modid,"copperaxe"),Group.CopperAxe);
+			Registry.register(Registry.ITEM, new Identifier(modid,"copperpickaxe"),Group.CopperPickaxe);
+			Registry.register(Registry.ITEM, new Identifier(modid,"coppersword"),Group.CopperSword);
+			Registry.register(Registry.ITEM, new Identifier(modid,"coppershovel"),Group.CopperShovel);
+			Registry.register(Registry.ITEM, new Identifier(modid,"copperhoe"),Group.CopperHoe);
+			Registry.register(Registry.ITEM, new Identifier(modid,"copperhelmet"),Group.CopperHelmet);
+			Registry.register(Registry.ITEM, new Identifier(modid,"copperchestplate"),Group.CopperChestPlate);
+			Registry.register(Registry.ITEM, new Identifier(modid,"copperleggings"),Group.CopperLeggings);
+			Registry.register(Registry.ITEM, new Identifier(modid,"copperboots"),Group.CopperBoots);
 			logger.info("Items Registried");
+			Thread getmods = new Thread(this::GetMods);
+			getmods.setName("Get Mod List");
+			getmods.start();
 		}
 		catch (Exception e){
 			e.printStackTrace();
 			logger.error("An Exception declared , "+e.toString());
 			throw e;
 		}
+	}
+	
+	public void GetMods(){
+		String st = "Detected "+FabricLoader.getInstance().getAllMods().toArray().length+" Mods:";
+		logger.info("In develop : "+FabricLoader.getInstance().isDevelopmentEnvironment());
+		logger.info(st);
+		spiltString spiltString = new spiltString();
+		Collection<ModContainer> modContainerCollection = FabricLoader.getInstance().getAllMods();
+		for (ModContainer m : modContainerCollection){
+			logger.info(" - "+spiltString.split(m.toString()));
+
+		}
+
 	}
 
 }

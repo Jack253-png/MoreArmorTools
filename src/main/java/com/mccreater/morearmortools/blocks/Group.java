@@ -28,7 +28,10 @@ public class Group {
     public static final Item IronGoldChestplate = new IronGoldChestPlate(DemoArmorMaterial.IRONGOLDINGOT, EquipmentSlot.CHEST, new Item.Settings().group(Armors));
     public static final Item IronGoldLeggings = new IronGoldLeggings(DemoArmorMaterial.IRONGOLDINGOT, EquipmentSlot.LEGS, new Item.Settings().group(Armors));
     public static final Item IronGoldBoots = new IronGoldBoots(DemoArmorMaterial.IRONGOLDINGOT, EquipmentSlot.FEET, new Item.Settings().group(Armors));
-
+    public static final Item CopperHelmet = new CopperHemlet(DemoArmorMaterial.COPPER, EquipmentSlot.HEAD, new Item.Settings().group(Armors));
+    public static final Item CopperChestPlate = new CopperChestPlate(DemoArmorMaterial.COPPER, EquipmentSlot.CHEST, new Item.Settings().group(Armors));
+    public static final Item CopperLeggings = new CopperLeggings(DemoArmorMaterial.COPPER, EquipmentSlot.LEGS, new Item.Settings().group(Armors));
+    public static final Item CopperBoots = new CopperBoots(DemoArmorMaterial.COPPER, EquipmentSlot.FEET, new Item.Settings().group(Armors));
     public static final Item WoolAxe = new WoolAxe(new Item.Settings().group(Tools));
     public static final Item WoolSword = new WoolSword(new Item.Settings().group(Tools));
     public static final Item WoolPickaxe = new WoolPickaxe(new Item.Settings().group(Tools));
@@ -40,6 +43,11 @@ public class Group {
     public static final Item IronGoldSword = new IronGoldSword(new Item.Settings().group(Tools));
     public static final Item IronGoldShovel = new IronGoldShovel(new Item.Settings().group(Tools));
     public static final Item IronGoldHoe = new IronGoldHoe(new Item.Settings().group(Tools));
+    public static final Item CopperAxe = new CopperAxe(new Item.Settings().group(Tools));
+    public static final Item CopperPickaxe = new CopperPickaxe(new Item.Settings().group(Tools));
+    public static final Item CopperSword = new CopperSword(new Item.Settings().group(Tools));
+    public static final Item CopperShovel = new CopperShovel(new Item.Settings().group(Tools));
+    public static final Item CopperHoe = new CopperHoe(new Item.Settings().group(Tools));
 
     public static final Block IndustryWool = new IndustryWool(FabricBlockSettings.of(Material.WOOL).hardness(0.7f));
     public static final Block IronGoldBlock = new IronGoldBlock(FabricBlockSettings.of(Material.METAL).hardness(2.0f));
@@ -54,5 +62,7 @@ public class Group {
     public static final Item CompressionStick8x = new CompressionStick8x(new Item.Settings().group(Materials));
     public static final Item CompressionStick9x = new CompressionStick9x(new Item.Settings().group(Materials));
     public static final Item IronGoldIngot = new IronGoldIngot(new Item.Settings().group(Materials));
+
+    public static final Item IronGoldBlockToIronGoldIngot = new IronGoldBlockToIronGoldIngot(new Item.Settings());
 
 }

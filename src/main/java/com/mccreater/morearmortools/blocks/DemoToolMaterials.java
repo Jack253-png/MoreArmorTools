@@ -1,13 +1,10 @@
 package com.mccreater.morearmortools.blocks;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.tag.ItemTags;
-import net.minecraft.tag.TagKey;
-import net.minecraft.util.Lazy;
-import java.rmi.registry.Registry;
 import java.util.function.Supplier;
+import net.minecraft.util.Lazy;
 
 public enum DemoToolMaterials implements ToolMaterial {
 
@@ -19,6 +16,9 @@ public enum DemoToolMaterials implements ToolMaterial {
     }),
     IRONGOLDINGOT(15,35,4.0F,2.0F,60,() -> {
         return Ingredient.fromTag(ItemTags.IRON_ORES);
+    }),
+    COPPER(15,40,3.0F,1.5F,70,() -> {
+        return Ingredient.fromTag(ItemTags.COPPER_ORES);
     });
 
     private final int miningLevel;
