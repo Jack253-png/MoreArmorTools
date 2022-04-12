@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "morearmortools",
+  "version": "0.3.3",
+
+  "name": "More Armor Tools",
+  "description": "Add more armor and tools into minecraft",
+  "authors": [
+    "mc_creater"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Jack253-png/More-Armor-Tools-for-1.18---Minecraft-Mod",
+    "sources": "https://github.com/Jack253-png/More-Armor-Tools-for-1.18---Minecraft-Mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/morearmortools/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.mccreater.morearmortools.Client"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java" : ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

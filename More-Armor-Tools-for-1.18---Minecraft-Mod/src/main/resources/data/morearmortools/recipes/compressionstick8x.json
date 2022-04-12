@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "***",
+    "***",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "morearmortools:compressionstick7x"
+    }
+
+  },
+  "result": {
+    "item": "morearmortools:compressionstick8x"
+  }
+}
