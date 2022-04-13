@@ -32,6 +32,20 @@
   "item.morearmortools.irongoldchestplate" : "琥珀金胸甲",
   "item.morearmortools.irongoldleggings" : "琥珀金护腿",
   "item.morearmortools.irongoldboots" : "琥珀金靴子",
-  "block.morearmortools.irongoldblock" : "琥珀金块"
+  "block.morearmortools.irongoldblock" : "琥珀金块",
+  "item.morearmortools.copperaxe" : "铜斧",
+  "item.morearmortools.copperpickaxe" : "铜稿",
+  "item.morearmortools.coppersword" : "铜剑",
+  "item.morearmortools.coppershovel" : "铜锹",
+  "item.morearmortools.copperhoe" : "铜锄",
+  "item.morearmortools.copperhelmet": "铜头盔",
+  "item.morearmortools.copperchestplate" : "铜胸甲",
+  "item.morearmortools.copperleggings" : "铜护腿",
+  "item.morearmortools.copperboots" : "铜靴子",
+  "item.morearmortools.obsidianaxe" : "黑曜石斧",
+  "item.morearmortools.obsidianpickaxe" : "黑曜石稿",
+  "item.morearmortools.obsidiansword" : "黑曜石剑",
+  "item.morearmortools.obsidianshovel" : "黑曜石锹",
+  "item.morearmortools.obsidianhoe" : "黑曜石锄"
 }
 

@@ -19,6 +19,9 @@ public enum DemoToolMaterials implements ToolMaterial {
     }),
     COPPER(15,40,3.0F,1.5F,70,() -> {
         return Ingredient.fromTag(ItemTags.COPPER_ORES);
+    }),
+    OBSIDIAN(50,50,6.0F,2.5F,70,() -> {
+        return Ingredient.fromTag(ItemTags.DIAMOND_ORES);
     });
 
     private final int miningLevel;

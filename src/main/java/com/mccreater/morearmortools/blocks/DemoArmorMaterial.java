@@ -21,6 +21,9 @@ public enum DemoArmorMaterial implements ArmorMaterial {
     }),
     COPPER("copper",7,new int[]{1,3,2,1},25,SoundEvents.BLOCK_COPPER_PLACE,0.5F,() -> {
         return Ingredient.ofItems(Items.COPPER_INGOT);
+    }),
+    OBSIDIAN("obsidian",15,new int[]{3,9,6,3},40,SoundEvents.BLOCK_NETHER_GOLD_ORE_PLACE,2.0F,() -> {
+        return Ingredient.ofItems(Items.OBSIDIAN);
     });
 
     private static final int[] BASE_DURABILITY = new int[]{6, 8, 8, 5};

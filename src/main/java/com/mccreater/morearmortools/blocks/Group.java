@@ -48,10 +48,14 @@ public class Group {
     public static final Item CopperSword = new CopperSword(new Item.Settings().group(Tools));
     public static final Item CopperShovel = new CopperShovel(new Item.Settings().group(Tools));
     public static final Item CopperHoe = new CopperHoe(new Item.Settings().group(Tools));
+    public static final Item ObsidianAxe = new ObsidianAxe(new Item.Settings().group(Tools));
+    public static final Item ObsidianPickaxe = new ObsidianPickaxe(new Item.Settings().group(Tools));
+    public static final Item ObsidianSword = new ObsidianSword(new Item.Settings().group(Tools));
+    public static final Item ObsidianShovel = new ObsidianShovel(new Item.Settings().group(Tools));
+    public static final Item ObsidianHoe = new ObsidianHoe(new Item.Settings().group(Tools));
 
     public static final Block IndustryWool = new IndustryWool(FabricBlockSettings.of(Material.WOOL).hardness(0.7f));
     public static final Block IronGoldBlock = new IronGoldBlock(FabricBlockSettings.of(Material.METAL).hardness(2.0f));
-
     public static final Item CompressionStick1x = new CompressionStick1x(new Item.Settings().group(Materials));
     public static final Item CompressionStick2x = new CompressionStick2x(new Item.Settings().group(Materials));
     public static final Item CompressionStick3x = new CompressionStick3x(new Item.Settings().group(Materials));

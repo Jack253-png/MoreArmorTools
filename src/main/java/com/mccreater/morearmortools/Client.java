@@ -5,10 +5,12 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import com.mccreater.morearmortools.blocks.Group;
 import java.lang.Thread;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import org.slf4j.LoggerFactory;
@@ -28,7 +30,10 @@ public class Client implements ModInitializer {
 		try {
 			String modid = "morearmortools";
 			logger.info("Now Time:"+new Date().toString());
-			logger.info("Max Memory:"+Runtime.getRuntime().maxMemory() / 1024 / 1024+"MB");
+			int max = (int) (Runtime.getRuntime().maxMemory() / 1024 / 1024);
+			int total = (int) (Runtime.getRuntime().totalMemory() / 1024 / 1024);
+			logger.info("Max Memory:"+max+"MB");
+			logger.info("Total Memory:"+total+"MB");
 			logger.info("Run on OS:"+ System.getProperty("os.name"));
 			ThreadGroup parentThread;
 			int totalThread = 0;
@@ -36,7 +41,7 @@ public class Client implements ModInitializer {
 					.getParent() != null; parentThread = parentThread.getParent()) {
 				totalThread = parentThread.activeCount();
 			}
-			logger.info("Threads:"+totalThread);
+			logger.info("Detected "+totalThread+"threads running");
 			Registry.register(Registry.ITEM, new Identifier(modid, "wool_hamlet"), Group.WoolHelmet);
 			Registry.register(Registry.ITEM, new Identifier(modid, "wool_chestplate"), Group.WoolChestplate);
 			Registry.register(Registry.ITEM, new Identifier(modid,"wool_leggings"), Group.WoolLeggings);
@@ -80,6 +85,11 @@ public class Client implements ModInitializer {
 			Registry.register(Registry.ITEM, new Identifier(modid,"copperchestplate"),Group.CopperChestPlate);
 			Registry.register(Registry.ITEM, new Identifier(modid,"copperleggings"),Group.CopperLeggings);
 			Registry.register(Registry.ITEM, new Identifier(modid,"copperboots"),Group.CopperBoots);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianaxe"),Group.ObsidianAxe);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianpickaxe"),Group.ObsidianPickaxe);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidiansword"),Group.ObsidianSword);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianshovel"),Group.ObsidianShovel);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianhoe"),Group.ObsidianHoe);
 			logger.info("Items Registried");
 			Thread getmods = new Thread(this::GetMods);
 			getmods.setName("Get Mod List");
@@ -100,9 +110,11 @@ public class Client implements ModInitializer {
 		Collection<ModContainer> modContainerCollection = FabricLoader.getInstance().getAllMods();
 		for (ModContainer m : modContainerCollection){
 			logger.info(" - "+spiltString.split(m.toString()));
-
 		}
-
+		String[] arrays = FabricLoader.getInstance().getLaunchArguments(true);
+		logger.info("Arguments :");
+		for (String array : arrays) {
+			logger.info(array);
+		}
 	}
-
 }

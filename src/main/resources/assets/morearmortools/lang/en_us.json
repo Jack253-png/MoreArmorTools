@@ -32,5 +32,19 @@
   "item.morearmortools.irongoldchestplate" : "Iron Gold ChestPlate",
   "item.morearmortools.irongoldleggings" : "Iron Gold Leggings",
   "item.morearmortools.irongoldboots" : "Iron Gold Boots",
-  "block.morearmortools.irongoldblock" : "Iron Gold Block"
+  "block.morearmortools.irongoldblock" : "Iron Gold Block",
+  "item.morearmortools.copperaxe" : "Copper Axe",
+  "item.morearmortools.copperpickaxe" : "Copper Pickaxe",
+  "item.morearmortools.coppersword" : "Copper Sword",
+  "item.morearmortools.coppershovel" : "Copper Shovel",
+  "item.morearmortools.copperhoe" : "Copper Hoe",
+  "item.morearmortools.copperhelmet" : "Copper Helmet",
+  "item.morearmortools.copperchestplate" : "Copper ChestPlate",
+  "item.morearmortools.copperleggings" : "Copper Leggings",
+  "item.morearmortools.copperboots" : "Copper Boots",
+  "item.morearmortools.obsidianaxe" : "Obsidian Axe",
+  "item.morearmortools.obsidianpickaxe" : "Obsidian Pickaxe",
+  "item.morearmortools.obsidiansword" : "Obsidian Sword",
+  "item.morearmortools.obsidianshovel" : "Obsidian Shovel",
+  "item.morearmortools.obsidianhoe" : "Obsidian Hoe"
 }
