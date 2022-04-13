@@ -13,6 +13,8 @@ import java.lang.Thread;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
+
+import org.lwjgl.system.Pointer;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import com.mccreater.morearmortools.utils.spiltString;
@@ -90,6 +92,10 @@ public class Client implements ModInitializer {
 			Registry.register(Registry.ITEM, new Identifier(modid,"obsidiansword"),Group.ObsidianSword);
 			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianshovel"),Group.ObsidianShovel);
 			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianhoe"),Group.ObsidianHoe);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianhelmet"),Group.ObsidianHelmet);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianchestplate"),Group.ObsidianChestplate);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianleggings"),Group.ObsidianLeggings);
+			Registry.register(Registry.ITEM, new Identifier(modid,"obsidianboots"),Group.ObsidianBoots);
 			logger.info("Items Registried");
 			Thread getmods = new Thread(this::GetMods);
 			getmods.setName("Get Mod List");

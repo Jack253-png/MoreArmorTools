@@ -46,6 +46,10 @@
   "item.morearmortools.obsidianpickaxe" : "黑曜石稿",
   "item.morearmortools.obsidiansword" : "黑曜石剑",
   "item.morearmortools.obsidianshovel" : "黑曜石锹",
-  "item.morearmortools.obsidianhoe" : "黑曜石锄"
+  "item.morearmortools.obsidianhoe" : "黑曜石锄",
+  "item.morearmortools.obsidianhelmet" : "黑曜石头盔",
+  "item.morearmortools.obsidianchestplate" : "黑曜石胸甲",
+  "item.morearmortools.obsidianleggings" : "黑曜石护腿",
+  "item.morearmortools.obsidianboots" : "黑曜石靴子"
 }
 

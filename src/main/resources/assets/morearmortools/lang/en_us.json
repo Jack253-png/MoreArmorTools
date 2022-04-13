@@ -46,5 +46,9 @@
   "item.morearmortools.obsidianpickaxe" : "Obsidian Pickaxe",
   "item.morearmortools.obsidiansword" : "Obsidian Sword",
   "item.morearmortools.obsidianshovel" : "Obsidian Shovel",
-  "item.morearmortools.obsidianhoe" : "Obsidian Hoe"
+  "item.morearmortools.obsidianhoe" : "Obsidian Hoe",
+  "item.morearmortools.obsidianhelmet" : "Obsidian Helmet",
+  "item.morearmortools.obsidianchestplate" : "Obsidian ChestPlate",
+  "item.morearmortools.obsidianleggings" : "Obsidian Leggings",
+  "item.morearmortools.obsidianboots" : "Obsidian Boots"
 }
