@@ -5,19 +5,15 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import com.mccreater.morearmortools.blocks.Group;
 import java.lang.Thread;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
-
-import org.lwjgl.system.Pointer;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import com.mccreater.morearmortools.utils.spiltString;
+import com.mccreater.morearmortools.Group;
 
 public class Client implements ModInitializer {
 	public static final Logger logger = LoggerFactory.getLogger("More Armor Tools Logger");
@@ -44,8 +40,8 @@ public class Client implements ModInitializer {
 				totalThread = parentThread.activeCount();
 			}
 			logger.info("Detected "+totalThread+"threads running");
-			Registry.register(Registry.ITEM, new Identifier(modid, "wool_hamlet"), Group.WoolHelmet);
-			Registry.register(Registry.ITEM, new Identifier(modid, "wool_chestplate"), Group.WoolChestplate);
+			Registry.register(Registry.ITEM, new Identifier(modid,"wool_hamlet"), Group.WoolHelmet);
+			Registry.register(Registry.ITEM, new Identifier(modid,"wool_chestplate"), Group.WoolChestplate);
 			Registry.register(Registry.ITEM, new Identifier(modid,"wool_leggings"), Group.WoolLeggings);
 			Registry.register(Registry.ITEM, new Identifier(modid,"wool_boots"),Group.WoolBoots);
 			Registry.register(Registry.ITEM, new Identifier(modid,"wool_axe"),Group.WoolAxe);

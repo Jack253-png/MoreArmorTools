@@ -6,7 +6,7 @@ import com.mccreater.morearmortools.blocks.DemoToolMaterials;
 
 public class IronGoldPickaxe extends PickaxeItem{
 
-    protected IronGoldPickaxe(Settings settings) {
+    public IronGoldPickaxe(Settings settings) {
         super(DemoToolMaterials.IRONGOLDINGOT, 6, -3.6F, settings);
     }
 }

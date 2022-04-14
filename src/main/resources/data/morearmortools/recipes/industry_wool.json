@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WR",
-    "RW"
+    "**",
+    "**"
   ],
   "key": {
-    "W": {
+    "*": {
       "tag": "minecraft:wools"
-    },
-    "R": {
-      "item": "minecraft:iron_nugget"
     }
   },
   "result": {
     "item": "morearmortools:industry_wool",
-    "count": 2
+    "count": 4
   }
 }
