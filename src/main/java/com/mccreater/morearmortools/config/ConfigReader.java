@@ -9,21 +9,31 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ConfigReader {
+    String defaultconfig;
     public ConfigResult readConfig(){
         String configdir = FabricLoader.getInstance().getConfigDir().toString() + "\\morearmortools\\morearmortools.json";
         Path path = Paths.get(FabricLoader.getInstance().getConfigDir().toString() + "\\morearmortools");
+        defaultconfig = """
+                {
+                  "debug" : true,
+                  "is_enabled": {
+                      "wool" : true,
+                      "stick": true,
+                      "irongold" : true,
+                      "copper" : true,
+                      "obsidian": true
+                  }
+                }""";
         try {
             try {
                 Files.createDirectories(path);
-            }
-            catch (IOException ex){
+            } catch (IOException ex) {
                 ex.printStackTrace();
             }
             File configfile = new File(configdir);
             if (!configfile.canRead()) {
                 FileOutputStream configinitlaze = new FileOutputStream(configfile);
-                configinitlaze.write("{\n  \"debug\" : true\n}".getBytes());
-
+                configinitlaze.write(defaultconfig.getBytes());
             }
             FileReader fileReader = new FileReader(configfile);
             Reader reader = new InputStreamReader(new FileInputStream(configfile), StandardCharsets.UTF_8);
@@ -36,9 +46,9 @@ public class ConfigReader {
             reader.close();
             String jsonStr = sb.toString();
             Gson gson = new Gson();
-            ConfigResult config = gson.fromJson(jsonStr,ConfigResult.class);
+            ConfigResult config;
+            config = gson.fromJson(jsonStr, ConfigResult.class);
             return config;
-
         }
         catch (IOException e) {
             e.printStackTrace();
