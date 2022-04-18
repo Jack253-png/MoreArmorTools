@@ -1,5 +1,7 @@
 package com.mccreater.morearmortools;
 
+import com.mccreater.morearmortools.utils.getBytes;
+import io.netty.channel.Channel;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
@@ -35,10 +37,11 @@ public class Client implements ModInitializer {
 		try {
 			if (debug) {
 				logger.info("Now Time:" + new Date().toString());
-				int max = (int) (Runtime.getRuntime().maxMemory() / 1024 / 1024);
-				int total = (int) (Runtime.getRuntime().totalMemory() / 1024 / 1024);
-				logger.info("Max Memory:" + max + "MB");
-				logger.info("Total Memory:" + total + "MB");
+				logger.info("Max Memory:" + getBytes.get(Runtime.getRuntime().maxMemory()));
+				logger.info("Total Memory:" + getBytes.get(Runtime.getRuntime().totalMemory()));
+				long total = Runtime.getRuntime().totalMemory();
+				long max = Runtime.getRuntime().maxMemory();
+				logger.info("Allcated : " + (total * 100 / max) + "%");
 				logger.info("Run on OS:" + System.getProperty("os.name"));
 				ThreadGroup parentThread;
 				int totalThread = 0;
@@ -115,18 +118,23 @@ public class Client implements ModInitializer {
 	}
 	
 	public void GetMods(){
-		String st = "Detected "+FabricLoader.getInstance().getAllMods().toArray().length+" Mods:";
-		logger.info("In develop : "+FabricLoader.getInstance().isDevelopmentEnvironment());
-		logger.info(st);
-		spiltString spiltString = new spiltString();
-		Collection<ModContainer> modContainerCollection = FabricLoader.getInstance().getAllMods();
-		for (ModContainer m : modContainerCollection){
-			logger.info(" - "+spiltString.split(m.toString()));
+		try {
+			String st = "Detected " + FabricLoader.getInstance().getAllMods().toArray().length + " Mods:";
+			logger.info("In develop : " + FabricLoader.getInstance().isDevelopmentEnvironment());
+			logger.info(st);
+			spiltString spiltString = new spiltString();
+			Collection<ModContainer> modContainerCollection = FabricLoader.getInstance().getAllMods();
+			for (ModContainer m : modContainerCollection) {
+				logger.info(" - " + spiltString.split(m.toString()));
+			}
+			String[] arrays = FabricLoader.getInstance().getLaunchArguments(true);
+			logger.info("Arguments :");
+			for (String array : arrays) {
+				logger.info(array);
+			}
 		}
-		String[] arrays = FabricLoader.getInstance().getLaunchArguments(true);
-		logger.info("Arguments :");
-		for (String array : arrays) {
-			logger.info(array);
+		catch (Exception e){
+			e.printStackTrace();
 		}
 	}
 }
