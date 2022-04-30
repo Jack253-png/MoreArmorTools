@@ -9,7 +9,6 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Lazy;
-
 import java.util.function.Supplier;
 
 public enum DemoArmorMaterial implements ArmorMaterial {
@@ -24,6 +23,9 @@ public enum DemoArmorMaterial implements ArmorMaterial {
     }),
     OBSIDIAN("obsidian",15,new int[]{3,9,6,3},40,SoundEvents.BLOCK_NETHER_GOLD_ORE_PLACE,2.0F,() -> {
         return Ingredient.ofItems(Items.OBSIDIAN);
+    }),
+    GRASSBLOCK("grass",4,new int[]{1,3,2,1},10,SoundEvents.BLOCK_GRASS_PLACE,0.0F,() -> {
+        return Ingredient.ofItems(Items.GRASS_BLOCK);
     });
 
     private static final int[] BASE_DURABILITY = new int[]{6, 8, 8, 5};

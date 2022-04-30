@@ -50,5 +50,20 @@
   "item.morearmortools.obsidianhelmet" : "Obsidian Helmet",
   "item.morearmortools.obsidianchestplate" : "Obsidian ChestPlate",
   "item.morearmortools.obsidianleggings" : "Obsidian Leggings",
-  "item.morearmortools.obsidianboots" : "Obsidian Boots"
+  "item.morearmortools.obsidianboots" : "Obsidian Boots",
+  "item.morearmortools.grass_helmet" : "Grass Helmet",
+  "morearmortools.menu.options" : "MoreArmorTools Settings",
+  "morearmortools.menu.configdone" : "Done",
+  "morearmortools.menu.option.title" : "Mod Options",
+  "morearmortools.menu.option.isdebug" : "Debug",
+  "morearmortools.menu.option.serverfontsize" : "Server Font Size",
+  "morearmortools.menu.option.fontsize.small" : "Small",
+  "morearmortools.menu.option.fontsize.mid" : "Mid",
+  "morearmortools.menu.option.fontsize.large" : "Large",
+  "morearmortools.menu.option.debug.on" : "Enabled",
+  "morearmortools.menu.option.debug.off" : "Disabled",
+  "morearmortools.menu.option.warn" : "These Settings change needed to restart Minecraft",
+  "morearmortools.menu.option.open.github.project" : "Open Project On Github",
+  "morearmortools.menu.option.open.github.report" : "Report Bugs On Github",
+  "morearmortools.menu.option.open.withbrowser" : "Open It with web browser"
 }

@@ -1,16 +1,28 @@
 package com.mccreater.morearmortools.mixin;
 
-import net.minecraft.client.gui.screen.TitleScreen;
+import com.mccreater.morearmortools.screen.ConfigScreen;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.screen.option.OptionsScreen;
+import net.minecraft.client.gui.widget.ButtonWidget;
+import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(TitleScreen.class)
-public class MixinClient {
+@Mixin(OptionsScreen.class)
+public class MixinClient extends Screen {
+	protected MixinClient(Text title) {
+		super(title);
+	}
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		System.out.println(info.toString());
-		System.out.println("This line is printed by an example mod mixin!");
+		this.addDrawableChild(new ButtonWidget(this.width / 2 + 5, this.height / 6 + 48 - 6 - 25,150,20,new TranslatableText("morearmortools.menu.options"),(action) -> {
+//			MinecraftClient.getInstance().setScreen(new ConfigScreen(this));
+			this.client.setScreen(new ConfigScreen(this));
+		}));
 	}
 }

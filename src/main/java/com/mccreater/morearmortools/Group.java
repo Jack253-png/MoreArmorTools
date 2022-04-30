@@ -37,6 +37,8 @@ public class Group {
     public static final Item ObsidianChestplate = new ObsidianChestPlate(DemoArmorMaterial.OBSIDIAN, EquipmentSlot.CHEST, new Item.Settings().group(Armors));
     public static final Item ObsidianLeggings = new ObsidianLeggings(DemoArmorMaterial.OBSIDIAN, EquipmentSlot.LEGS, new Item.Settings().group(Armors));
     public static final Item ObsidianBoots = new ObsidianBoots(DemoArmorMaterial.OBSIDIAN, EquipmentSlot.FEET, new Item.Settings().group(Armors));
+    public static final Item GrassBlockHelmet = new GrassBlockHelmet(DemoArmorMaterial.GRASSBLOCK, EquipmentSlot.HEAD, new Item.Settings().group(Armors));
+
     public static final Item WoolAxe = new WoolAxe(new Item.Settings().group(Tools));
     public static final Item WoolSword = new WoolSword(new Item.Settings().group(Tools));
     public static final Item WoolPickaxe = new WoolPickaxe(new Item.Settings().group(Tools));

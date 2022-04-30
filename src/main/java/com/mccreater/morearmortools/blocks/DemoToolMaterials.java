@@ -1,5 +1,6 @@
 package com.mccreater.morearmortools.blocks;
 
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.tag.ItemTags;
@@ -9,19 +10,22 @@ import net.minecraft.util.Lazy;
 public enum DemoToolMaterials implements ToolMaterial {
 
     INDUSTRYWOOL(0, 32, 1.0F, 0.0F, 20, () -> {
-        return Ingredient.fromTag(ItemTags.WOOL);
+        return Ingredient.ofItems(Items.WHITE_WOOL);
     }),
     COMPRESSIONSTICK(20,45,5.0F,3.0F,100,() -> {
-        return Ingredient.fromTag(ItemTags.LOGS);
+        return Ingredient.ofItems(Items.STICK);
     }),
     IRONGOLDINGOT(15,35,4.0F,2.0F,60,() -> {
-        return Ingredient.fromTag(ItemTags.IRON_ORES);
+        return Ingredient.ofItems(Items.IRON_INGOT);
     }),
     COPPER(15,40,3.0F,1.5F,70,() -> {
-        return Ingredient.fromTag(ItemTags.COPPER_ORES);
+        return Ingredient.ofItems(Items.COPPER_INGOT);
     }),
     OBSIDIAN(50,50,6.0F,2.5F,70,() -> {
-        return Ingredient.fromTag(ItemTags.DIAMOND_ORES);
+        return Ingredient.ofItems(Items.OBSIDIAN);
+    }),
+    GRASSBLOCK(10,30,1.0F,0.0F,10,() -> {
+        return Ingredient.ofItems(Items.GRASS_BLOCK);
     });
 
     private final int miningLevel;

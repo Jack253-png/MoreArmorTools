@@ -50,6 +50,21 @@
   "item.morearmortools.obsidianhelmet" : "黑曜石头盔",
   "item.morearmortools.obsidianchestplate" : "黑曜石胸甲",
   "item.morearmortools.obsidianleggings" : "黑曜石护腿",
-  "item.morearmortools.obsidianboots" : "黑曜石靴子"
+  "item.morearmortools.obsidianboots" : "黑曜石靴子",
+  "item.morearmortools.grass_helmet" : "草头盔",
+  "morearmortools.menu.options" : "更多盔甲和工具 设置",
+  "morearmortools.menu.configdone" : "完成",
+  "morearmortools.menu.option.title" : "模组设置",
+  "morearmortools.menu.option.isdebug" : "调试模式",
+  "morearmortools.menu.option.serverfontsize" : "服务器字体大小",
+  "morearmortools.menu.option.fontsize.small" : "小",
+  "morearmortools.menu.option.fontsize.mid" : "中",
+  "morearmortools.menu.option.fontsize.large" : "大",
+  "morearmortools.menu.option.debug.on" : "启用",
+  "morearmortools.menu.option.debug.off" : "禁用",
+  "morearmortools.menu.option.warn" : "应用这些选项需要重启 Minecraft",
+  "morearmortools.menu.option.open.github.project" : "在 Github 上打开此项目",
+  "morearmortools.menu.option.open.github.report" : "在 Github 上反馈 Bug",
+  "morearmortools.menu.option.open.withbrowser" : "在浏览器里打开"
 }
 
