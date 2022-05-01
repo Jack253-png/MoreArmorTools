@@ -11,6 +11,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Objects;
+
 @Mixin(OptionsScreen.class)
 public class MixinClient extends Screen {
 	protected MixinClient(Text title) {
@@ -18,8 +20,10 @@ public class MixinClient extends Screen {
 	}
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		this.addDrawableChild(new ButtonWidget(this.width / 2 + 5, this.height / 6 + 48 - 6 - 24,150,20,new TranslatableText("morearmortools.menu.options"),button -> {
-			this.client.setScreen(new ConfigScreen(this));
+		this.addDrawableChild(new ButtonWidget(this.width / 2 - 5 - 150, this.height / 6 + 48 - 6 - 24,150 + 10 + 150,20,new TranslatableText("morearmortools.menu.options"),button -> {
+			if (!Objects.equals(this.client,null)) {
+				this.client.setScreen(new ConfigScreen(this));
+			}
 		}));
 	}
 }

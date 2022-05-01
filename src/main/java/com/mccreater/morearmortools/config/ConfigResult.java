@@ -4,7 +4,6 @@ import java.util.Map;
 
 public class ConfigResult {
     public boolean debug;
-    public Map<String , Boolean> is_enabled;
     public boolean changeUiLookAndFeel;
     public String FontName;
     public int FontSize;

@@ -6,7 +6,6 @@ import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.TranslatableText;
 import com.mccreater.morearmortools.utils.rgb2int;
-import java.util.Vector;
 
 public class ConfigScreen extends Screen {
     private final Screen screen;

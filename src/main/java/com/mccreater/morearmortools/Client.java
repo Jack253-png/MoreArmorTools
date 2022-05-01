@@ -29,7 +29,6 @@ import com.mccreater.morearmortools.utils.spiltString;
 import com.mccreater.morearmortools.config.ConfigReader;
 import com.mccreater.morearmortools.config.ConfigResult;
 import static com.mccreater.morearmortools.Vars.modid;
-import com.mccreater.morearmortools.config.ConfigWriter;
 
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
