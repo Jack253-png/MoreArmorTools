@@ -1,5 +1,6 @@
 package com.mccreater.morearmortools;
 
+import com.mccreater.morearmortools.utils.GetNumMaxAndMin;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
@@ -14,6 +15,7 @@ import java.awt.*;
 
 import java.lang.Thread;
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Enumeration;
@@ -107,7 +109,16 @@ public class Client implements ModInitializer {
 					totalThread = parentThread.activeCount();
 				}
 				logger.info("Detected " + totalThread + " threads running");
+				logger.info("");
+				logger.info("Bytes Value Limit : " + GetNumMaxAndMin.getByte());
+				logger.info("Chars Value Limit : " + GetNumMaxAndMin.getChar());
+				logger.info("Floats Value Limit : " + GetNumMaxAndMin.getFloat());
+				logger.info("Doubles Value Limit : " + GetNumMaxAndMin.getDouble());
+				logger.info("Short Value Limit : " + GetNumMaxAndMin.getShort());
+				logger.info("Ints Value Limit : " + GetNumMaxAndMin.getInt());
+				logger.info("Longs Value Limit : " + GetNumMaxAndMin.getLong());
 			}
+
 
 			Registry.register(Registry.ITEM, new Identifier(modid, "wool_hamlet"), Group.WoolHelmet);
 			Registry.register(Registry.ITEM, new Identifier(modid, "wool_chestplate"), Group.WoolChestplate);

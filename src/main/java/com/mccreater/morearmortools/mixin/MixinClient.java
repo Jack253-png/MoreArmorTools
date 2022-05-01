@@ -1,11 +1,9 @@
 package com.mccreater.morearmortools.mixin;
 
 import com.mccreater.morearmortools.screen.ConfigScreen;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.OptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,8 +18,7 @@ public class MixinClient extends Screen {
 	}
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		this.addDrawableChild(new ButtonWidget(this.width / 2 + 5, this.height / 6 + 48 - 6 - 25,150,20,new TranslatableText("morearmortools.menu.options"),(action) -> {
-//			MinecraftClient.getInstance().setScreen(new ConfigScreen(this));
+		this.addDrawableChild(new ButtonWidget(this.width / 2 + 5, this.height / 6 + 48 - 6 - 24,150,20,new TranslatableText("morearmortools.menu.options"),button -> {
 			this.client.setScreen(new ConfigScreen(this));
 		}));
 	}
