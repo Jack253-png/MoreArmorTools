@@ -118,8 +118,6 @@ public class Client implements ModInitializer {
 			Registry.register(Registry.ITEM, new Identifier(modid, "wool_pickaxe"), Group.WoolPickaxe);
 			Registry.register(Registry.ITEM, new Identifier(modid, "wool_shovel"), Group.WoolShovel);
 			Registry.register(Registry.ITEM, new Identifier(modid, "wool_hoe"), Group.WoolHoe);
-			Registry.register(Registry.BLOCK, new Identifier(modid, "industry_wool"), Group.IndustryWool);
-			Registry.register(Registry.ITEM, new Identifier(modid, "industry_wool"), new BlockItem(Group.IndustryWool, new Item.Settings().group(Group.Materials)));
 			logger.info("Wool Tools Registered");
 
 
@@ -173,6 +171,15 @@ public class Client implements ModInitializer {
 			logger.info("Obsidian Tools Registered");
 
 			Registry.register(Registry.ITEM, new Identifier(modid, "grass_helmet"), Group.GrassBlockHelmet);
+			Registry.register(Registry.ITEM, new Identifier(modid, "grass_chestplate"), Group.GrassBlockChestPlate);
+			Registry.register(Registry.ITEM, new Identifier(modid, "grass_leggings"), Group.GrassBlockLeggings);
+			Registry.register(Registry.ITEM, new Identifier(modid, "grass_boots"),Group.GrassBlockBoots);
+			Registry.register(Registry.ITEM, new Identifier(modid, "grass_axe"),Group.GrassBlockAxe);
+			Registry.register(Registry.ITEM, new Identifier(modid, "grass_sword"),Group.GrassBlockSword);
+			Registry.register(Registry.ITEM, new Identifier(modid, "grass_pickaxe"),Group.GrassBlockPickaxe);
+			Registry.register(Registry.ITEM, new Identifier(modid, "grass_hoe"),Group.GrassBlockHoe);
+			Registry.register(Registry.ITEM, new Identifier(modid, "grass_shovel"),Group.GrassBlockShovel);
+
 			logger.info("Grass Tools Registered");
 
 			logger.info("Items Registried");
@@ -181,8 +188,6 @@ public class Client implements ModInitializer {
 			if (debug) {
 				getmods.start();
 			}
-			int i = 2147483647;
-			i += 1;
 		}
 		catch (Exception e){
 			e.printStackTrace();

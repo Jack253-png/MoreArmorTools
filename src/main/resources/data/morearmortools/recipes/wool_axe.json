@@ -7,7 +7,7 @@
   ],
   "key": {
     "*": {
-      "item": "morearmortools:industry_wool"
+      "item": "minecraft:white_wool"
     },
     "-": {
       "item": "minecraft:stick"

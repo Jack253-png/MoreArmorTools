@@ -38,6 +38,9 @@ public class Group {
     public static final Item ObsidianLeggings = new ObsidianLeggings(DemoArmorMaterial.OBSIDIAN, EquipmentSlot.LEGS, new Item.Settings().group(Armors));
     public static final Item ObsidianBoots = new ObsidianBoots(DemoArmorMaterial.OBSIDIAN, EquipmentSlot.FEET, new Item.Settings().group(Armors));
     public static final Item GrassBlockHelmet = new GrassBlockHelmet(DemoArmorMaterial.GRASSBLOCK, EquipmentSlot.HEAD, new Item.Settings().group(Armors));
+    public static final Item GrassBlockChestPlate = new GrassBlockChestPlate(DemoArmorMaterial.GRASSBLOCK, EquipmentSlot.CHEST, new Item.Settings().group(Armors));
+    public static final Item GrassBlockLeggings = new GrassBlockLeggings(DemoArmorMaterial.GRASSBLOCK, EquipmentSlot.LEGS, new Item.Settings().group(Armors));
+    public static final Item GrassBlockBoots = new GrassBlockBoots(DemoArmorMaterial.GRASSBLOCK, EquipmentSlot.FEET, new Item.Settings().group(Armors));
 
     public static final Item WoolAxe = new WoolAxe(new Item.Settings().group(Tools));
     public static final Item WoolSword = new WoolSword(new Item.Settings().group(Tools));
@@ -60,8 +63,12 @@ public class Group {
     public static final Item ObsidianSword = new ObsidianSword(new Item.Settings().group(Tools));
     public static final Item ObsidianShovel = new ObsidianShovel(new Item.Settings().group(Tools));
     public static final Item ObsidianHoe = new ObsidianHoe(new Item.Settings().group(Tools));
+    public static final Item GrassBlockAxe = new GrassBlockAxe(new Item.Settings().group(Tools));
+    public static final Item GrassBlockSword = new GrassBlockSword(new Item.Settings().group(Tools));
+    public static final Item GrassBlockPickaxe = new GrassBlockPickaxe(new Item.Settings().group(Tools));
+    public static final Item GrassBlockHoe = new GrassBlockHoe(new Item.Settings().group(Tools));
+    public static final Item GrassBlockShovel = new GrassBlockShovel(new Item.Settings().group(Tools));
 
-    public static final Block IndustryWool = new IndustryWool(FabricBlockSettings.of(Material.WOOL).hardness(0.7f));
     public static final Block IronGoldBlock = new IronGoldBlock(FabricBlockSettings.of(Material.METAL).hardness(2.0f));
     public static final Item CompressionStick1x = new CompressionStick1x(new Item.Settings().group(Materials));
     public static final Item CompressionStick2x = new CompressionStick2x(new Item.Settings().group(Materials));
