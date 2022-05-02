@@ -67,6 +67,14 @@ public class ModDebugOptions
         });
         fonttypelabel.setFont(new Font("Consolas",Font.ITALIC,14));
         fonttypebutton.setFont(font);
+        JLabel changelooklabel = new JLabel("Change Feel");
+        changelooklabel.setFont(new Font("Consolas",Font.ITALIC,16));
+        JButton changelookbutton = new JButton(configWriter.nowConfig.changeUiLookAndFeel ? "Enabled" : "Disabled");
+        changelookbutton.setFont(font);
+        changelookbutton.addActionListener(e -> {
+            configWriter.nowConfig.changeUiLookAndFeel = !configWriter.nowConfig.changeUiLookAndFeel;
+            changelookbutton.setText(configWriter.nowConfig.changeUiLookAndFeel ? "Enabled" : "Disabled");
+        });
         panel.add(jLabel);
         panel.add(debug_label);
         panel.add(new JLabel("     "));
@@ -77,10 +85,10 @@ public class ModDebugOptions
         panel.add(fonttypelabel);
         panel.add(new JLabel("     "));
         panel.add(fonttypebutton);
+        panel.add(changelooklabel);
+        panel.add(new JLabel("     "));
+        panel.add(changelookbutton);
         panel.add(jButton);
-
-
-
 
         frame.add(panel);    //添加面板到容器
         frame.setBounds(300,200,300,600);

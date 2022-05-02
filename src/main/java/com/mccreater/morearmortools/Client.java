@@ -76,7 +76,9 @@ public class Client implements ModInitializer {
 		new Thread(this::window).start();
 	}
 	public void window(){
+		logger.info("find environment type : "+FabricLoader.getInstance().getEnvironmentType().toString());
 		if (Objects.equals(FabricLoader.getInstance().getEnvironmentType().toString(), "SERVER")){
+			logger.info("loading server options screen");
 			GridLayoutDemo window = new GridLayoutDemo();
 			window.main();
 		}
