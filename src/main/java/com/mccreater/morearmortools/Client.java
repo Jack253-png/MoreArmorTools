@@ -1,5 +1,6 @@
 package com.mccreater.morearmortools;
 
+import com.mccreater.morearmortools.serverscreen.GridLayoutDemo;
 import com.mccreater.morearmortools.utils.GetNumMaxAndMin;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -15,7 +16,6 @@ import java.awt.*;
 
 import java.lang.Thread;
 
-import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Enumeration;
@@ -73,6 +73,13 @@ public class Client implements ModInitializer {
 				font.start();
 			}
 		}
+		new Thread(this::window).start();
+	}
+	public void window(){
+		if (Objects.equals(FabricLoader.getInstance().getEnvironmentType().toString(), "SERVER")){
+			GridLayoutDemo window = new GridLayoutDemo();
+			window.main();
+		}
 	}
 	public void showWindow(ConfigResult r){
 		FontUIResource fontRes = new FontUIResource(new Font(r.FontName,r.FontType,r.FontSize));
@@ -85,7 +92,7 @@ public class Client implements ModInitializer {
 			}
 		}
 		try {
-			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		}
 		catch (Exception e){
 			e.printStackTrace();
