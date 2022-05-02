@@ -64,6 +64,7 @@
   "morearmortools.menu.option.maintitle" : "模组设置",
   "morearmortools.menu.option.debugtitle" : "模组调试设置",
   "morearmortools.menu.option.isdebug" : "调试模式",
+  "morearmortools.menu.option.changelook" : "改变服务器UI样式",
   "morearmortools.menu.option.serverfontsize" : "服务器字体大小",
   "morearmortools.menu.option.fontsize.small" : "小",
   "morearmortools.menu.option.fontsize.mid" : "中",

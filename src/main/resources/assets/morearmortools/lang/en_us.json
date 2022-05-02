@@ -64,6 +64,7 @@
   "morearmortools.menu.option.maintitle" : "Mod Options",
   "morearmortools.menu.option.debugtitle" : "Mod Debug Options",
   "morearmortools.menu.option.isdebug" : "Debug",
+  "morearmortools.menu.option.changelook" : "Change Server Look And Feel",
   "morearmortools.menu.option.serverfontsize" : "Server Font Size",
   "morearmortools.menu.option.fontsize.small" : "Small",
   "morearmortools.menu.option.fontsize.mid" : "Mid",
